@@ -29,7 +29,7 @@ The unifiedpushclient configuration is as follows:
 * `mastersecret`. Should contain the mastersecret of the application where we want to send notifications. No Default 
 * `variants`. Array of variants that belongs to the Application. No Default
 
-# Message Examples
+# Message Fields
 
     {
         "action": "send",
@@ -38,7 +38,7 @@ The unifiedpushclient configuration is as follows:
         "aliases": [array_of_aliases]
     }
 
-JavaScript Example:
+# JavaScript Example:
 
 var message = new Object();
 message.action = "send";
