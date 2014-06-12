@@ -28,3 +28,24 @@ The unifiedpushclient configuration is as follows:
 * `pushapplicationid`. Should contain the ID of the application where we want to send notifications. No Default 
 * `mastersecret`. Should contain the mastersecret of the application where we want to send notifications. No Default 
 * `variants`. Array of variants that belongs to the Application. No Default
+
+# Message Fields
+
+    {
+        "action": "send",
+        "alert": <message_to_send>,
+        "variants": [array_of_variants],
+        "aliases": [array_of_aliases]
+    }
+
+# JavaScript Example:
+
+var message = new Object();
+message.action = "send";
+message.alert = "message";
+message.variants = ["variant1", "variant2", ..., "variantn"];
+message.aliases = ["alias1", "alias2", ..., "aliasn"];
+
+eb.send("vertx.unifiedpush", message, function(reply){ 
+	console.log(reply);
+});
