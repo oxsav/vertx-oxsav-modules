@@ -44,7 +44,7 @@ The unifiedpushclient configuration is as follows:
 		"action"    : "action",
 		"alert"     : "message",
 		"variants"  : ["variant1", "variant2", ..., "variantn"],
-		aliases = ["alias1", "alias2", ..., "aliasn"]
+		"aliases"     : ["alias1", "alias2", ..., "aliasn"]
 	};
 
 	eb.send("vertx.unifiedpush", message, function(reply){ 
