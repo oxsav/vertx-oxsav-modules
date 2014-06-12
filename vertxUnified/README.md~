@@ -39,13 +39,14 @@ The unifiedpushclient configuration is as follows:
     }
 
 # JavaScript Example:
+{
+	var message = new Object();
+	message.action = "send";
+	message.alert = "message";
+	message.variants = ["variant1", "variant2", ..., "variantn"];
+	message.aliases = ["alias1", "alias2", ..., "aliasn"];
 
-var message = new Object();
-message.action = "send";
-message.alert = "message";
-message.variants = ["variant1", "variant2", ..., "variantn"];
-message.aliases = ["alias1", "alias2", ..., "aliasn"];
-
-eb.send("vertx.unifiedpush", message, function(reply){ 
-	console.log(reply);
-});
+	eb.send("vertx.unifiedpush", message, function(reply){ 
+		console.log(reply);
+	});
+}
