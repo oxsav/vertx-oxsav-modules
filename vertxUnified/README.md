@@ -12,6 +12,7 @@ The module name is `unifiedpushclient`.
 The unifiedpushclient configuration is as follows:
 
     {
+    	"address": <address>,
         "unifiedpushurl": <unifiedpushurl>,
         "unifiedport": <unifiedport>,
         "serverName": <serverName>,
@@ -20,7 +21,8 @@ The unifiedpushclient configuration is as follows:
         "mastersecret": <mastersecret>,
         "variants": <variants>
     }
-
+    
+* `address`. This is the address that you should send the messages. Default `vertx.unifiedpush`
 * `unifiedpushurl`. This is the URL where the Unified Push Server is running. Default `localhost`
 * `unifiedport`. This is the port number where the Unified Push Server is running. Default `8080`
 * `serverName`. This is the server name that must be defined next to the unifiedpushurl and unifiedport. Default `unifiedpush-server-0.10.1` 
